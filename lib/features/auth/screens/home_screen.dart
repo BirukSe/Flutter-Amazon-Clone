@@ -3,6 +3,7 @@ import 'package:e_comm/features/auth/widgets/address_box.dart';
 import 'package:e_comm/features/auth/widgets/carousel_image.dart';
 import 'package:e_comm/features/auth/widgets/deal_of_day.dart';
 import 'package:e_comm/features/auth/widgets/top_categories.dart';
+import 'package:e_comm/features/search/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   void navigateToSearchScreen(String query) {
-    // Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
+    Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
   }
 
   @override

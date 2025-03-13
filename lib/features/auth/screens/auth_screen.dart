@@ -40,6 +40,7 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 
   void signInUser() {
+    print('dfdf');
     authService.signInUser(
       context: context,
       email: _emailController.text,

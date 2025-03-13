@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 // const { productSchema } = require("./product");
-
+import { pproductSchema } from './product.js';
 const uuserSchema = mongoose.Schema({
   name: {
     required: true,
@@ -32,17 +32,17 @@ const uuserSchema = mongoose.Schema({
     type: String,
     default: "user",
   },
+   cart: [
+    {
+      product: pproductSchema,
+      quantity: {
+        type: Number,
+        required: true,
+      }, 
+    },
+  ], 
  
 });
 
 const Uuser = mongoose.model("Uuser", uuserSchema);
 export default Uuser;
- // cart: [
-  //   {
-  //     product: productSchema,
-  //     quantity: {
-  //       type: Number,
-  //       required: true,
-  //     },
-  //   },
-  // ], 
